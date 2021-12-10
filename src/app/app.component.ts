@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from './service/pokemon.service';
 import {Observable} from 'rxjs';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +13,15 @@ export class AppComponent implements OnInit {
   searchTerm: string;
 
   constructor(private pokemonService: ConfigService) {
-    this.searchTerm = 'pikachu';
+    this.searchTerm = '';
   }
 
   ngOnInit() {
     this.pokemonService.getPokemonList();
+  }
 
-    //this.pokemonService.getPokemonByName(this.searchTerm);
+  getPokemonByName() {
+    this.pokemonService.getPokemonByName(this.searchTerm);
   }
 }
 

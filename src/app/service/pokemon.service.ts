@@ -31,7 +31,7 @@ export class ConfigService {
                 for (var i = 1; i <= amountWanted; i++) {
                     var randomPokemonIndex = Math.floor(Math.random() * amountOfPokemons);
                     if (indexArray.includes(randomPokemonIndex)) { // if index is already in array, it is not added and random is made again
-                        //console.log(randomPokemonIndex)
+                        console.log(randomPokemonIndex)
                         i--;
                         continue;  
                     } else { // if index is not in array, it is used to push data result to griddedPokemons

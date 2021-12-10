@@ -1,1 +1,10 @@
-<header>Pokemon App</header>
+<mat-card>
+    <mat-card-title>Pokémon App</mat-card-title>
+
+    <mat-form-field>
+        <input type="text" matInput placeholder="Search..." [(ngModel)]= "searchTerm">
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="getPokemonByName()">Search</button>
+    
+</mat-card>
