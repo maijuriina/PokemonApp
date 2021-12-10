@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from './service/pokemon.service';
+import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import {Pokemon} from './item/pokemon';
 
 @Component({
   selector: 'app-root',
@@ -11,13 +13,15 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent implements OnInit {
   title = 'PokemonApp';
   searchTerm: string;
+  griddedPokemonList$!: Observable<Pokemon> [];
 
   constructor(private pokemonService: ConfigService) {
     this.searchTerm = '';
   }
 
   ngOnInit() {
-    this.pokemonService.getPokemonList();
+    this.griddedPokemonList$ = this.pokemonService.getPokemonList();
+    //this.pokemonService.getData();
   }
 
   getPokemonByName() {

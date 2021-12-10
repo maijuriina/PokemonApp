@@ -6,5 +6,9 @@
         <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
     <button mat-raised-button color="accent" (click)="getPokemonByName()">Search</button>
-    
+    <!--<mat-grid-list cols="4" rowHeight="2:1">
+      <mat-grid-tile *ngFor="let pokemon of griddedPokemonList$ | async">
+        <mat-grid-tile-header><h3>{{pokemon}}</h3></mat-grid-tile-header>
+      </mat-grid-tile>
+    </mat-grid-list>-->
 </mat-card>
