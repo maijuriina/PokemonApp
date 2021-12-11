@@ -4,6 +4,7 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import {Pokemon} from './item/pokemon';
+import { NamedAPIResourceList } from 'pokenode-ts';
 
 @Component({
   selector: 'app-root',
@@ -13,15 +14,14 @@ import {Pokemon} from './item/pokemon';
 export class AppComponent implements OnInit {
   title = 'PokemonApp';
   searchTerm: string;
-  griddedPokemonList$!: Observable<Pokemon> [];
+  griddedPokemons$!: Observable<any>;
 
   constructor(private pokemonService: ConfigService) {
     this.searchTerm = '';
   }
 
   ngOnInit() {
-    this.griddedPokemonList$ = this.pokemonService.getPokemonList();
-    //this.pokemonService.getData();
+    this.griddedPokemons$ = this.pokemonService.getPokemonList();
   }
 
   getPokemonByName() {
