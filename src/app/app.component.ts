@@ -26,6 +26,8 @@ export class AppComponent implements OnInit {
 
   getPokemonByName() {
     this.pokemonService.getPokemonByName(this.searchTerm);
+    //this.pokemonService.getHP(this.searchTerm);
   }
+
 }
 
