@@ -1,0 +1,58 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Endpoints = void 0;
+/**
+ * Endpoints of the PokéAPI
+ */
+var Endpoints;
+(function (Endpoints) {
+    Endpoints["Berry"] = "/berry";
+    Endpoints["BerryFirmness"] = "/berry-firmness";
+    Endpoints["BerryFlavor"] = "/berry-flavor";
+    Endpoints["ContestType"] = "/contest-type";
+    Endpoints["ContestEffect"] = "/contest-effect";
+    Endpoints["SuperContestEffect"] = "/super-contest-effect";
+    Endpoints["EncouterMethod"] = "/encounter-method";
+    Endpoints["EncounterCondition"] = "/encounter-condition";
+    Endpoints["EncouterConditionValue"] = "/encounter-condition-value";
+    Endpoints["EvolutionChain"] = "/evolution-chain";
+    Endpoints["EvolutionTrigger"] = "/evolution-trigger";
+    Endpoints["Generation"] = "/generation";
+    Endpoints["Pokedex"] = "/pokedex";
+    Endpoints["Version"] = "/version";
+    Endpoints["VersionGroup"] = "/version-group";
+    Endpoints["Item"] = "/item";
+    Endpoints["ItemAttribute"] = "/item-attribute";
+    Endpoints["ItemCategory"] = "/item-category";
+    Endpoints["ItemFlingEffect"] = "/item-fling-effect";
+    Endpoints["ItemPocket"] = "/item-pocket";
+    Endpoints["Location"] = "/location";
+    Endpoints["LocationArea"] = "/location-area";
+    Endpoints["PalParkArea"] = "/pal-park-area";
+    Endpoints["Region"] = "/region";
+    Endpoints["Machine"] = "/machine";
+    Endpoints["Move"] = "/move";
+    Endpoints["MoveAilment"] = "/move-ailment";
+    Endpoints["MoveBattleStyle"] = "/move-battle-style";
+    Endpoints["MoveCategory"] = "/move-category";
+    Endpoints["MoveDamageClass"] = "/move-damage-class";
+    Endpoints["MoveLearnMethod"] = "/move-learn-method";
+    Endpoints["MoveTarget"] = "/move-target";
+    Endpoints["Ability"] = "/ability";
+    Endpoints["Characteristic"] = "/characteristic";
+    Endpoints["EggGroup"] = "/egg-group";
+    Endpoints["Gender"] = "/gender";
+    Endpoints["GrowthRate"] = "/growth-rate";
+    Endpoints["Nature"] = "/nature";
+    Endpoints["PokeathlonStat"] = "/pokeathlon-stat";
+    Endpoints["Pokemon"] = "/pokemon";
+    Endpoints["PokemonLocationArea"] = "/pokemon/:id/encounters";
+    Endpoints["PokemonColor"] = "/pokemon-color";
+    Endpoints["PokemonForm"] = "/pokemon-form";
+    Endpoints["PokemonHabitat"] = "/pokemon-habitat";
+    Endpoints["PokemonShape"] = "/pokemon-shape";
+    Endpoints["PokemonSpecies"] = "/pokemon-species";
+    Endpoints["Stat"] = "/stat";
+    Endpoints["Type"] = "/type";
+    Endpoints["Language"] = "/language";
+})(Endpoints = exports.Endpoints || (exports.Endpoints = {}));

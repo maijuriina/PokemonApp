@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="40c9ee3a-94ef-4088-ba4b-212f848f3740" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/pokemon.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/pokemon.service.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="22147iH5eCU955uSxwRtKlXlw2j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maijuriina\PokemonApp" />
+      <recent name="C:\Users\Maijuriina\PokemonApp\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (PokemonApp)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40c9ee3a-94ef-4088-ba4b-212f848f3740" name="Default Changelist" comment="" />
+      <created>1638991593256</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638991593256</updated>
+      <workItem from="1638991595087" duration="2110000" />
+      <workItem from="1639038800931" duration="1600000" />
+      <workItem from="1639040413391" duration="642000" />
+      <workItem from="1639041107086" duration="429000" />
+      <workItem from="1639041630585" duration="1444000" />
+      <workItem from="1639043307741" duration="1041000" />
+      <workItem from="1639211986317" duration="981000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="703" y="355" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1639043594012">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="703" y="355" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1639043594012" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1639042360051">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1639042360051" />
+    <state width="1899" height="261" key="GridCell.Tab.0.bottom" timestamp="1639044349497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1639044349497" />
+    <state width="1899" height="261" key="GridCell.Tab.0.center" timestamp="1639044349497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="261" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1639044349497" />
+    <state width="1899" height="261" key="GridCell.Tab.0.left" timestamp="1639044349497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="261" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1639044349497" />
+    <state width="1899" height="261" key="GridCell.Tab.0.right" timestamp="1639044349497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="261" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1639044349497" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1639043870234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1639043870234" />
+    <state x="581" y="201" width="758" height="638" key="find.popup" timestamp="1638991901967">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="581" y="201" width="758" height="638" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1638991901967" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1639043834587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1639043834587" />
+  </component>
+</project>

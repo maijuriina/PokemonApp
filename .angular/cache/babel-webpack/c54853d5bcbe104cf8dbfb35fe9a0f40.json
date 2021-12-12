@@ -1,0 +1,1 @@
+{"ast":null,"code":"\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.BaseURL = void 0;\nvar BaseURL;\n\n(function (BaseURL) {\n  BaseURL[\"REST\"] = \"https://pokeapi.co/api/v2\";\n})(BaseURL = exports.BaseURL || (exports.BaseURL = {}));","map":null,"metadata":{},"sourceType":"script"}

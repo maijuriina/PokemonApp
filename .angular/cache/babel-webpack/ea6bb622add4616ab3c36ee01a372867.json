@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Pokemon {\n  //hp: number;\n  //imageURL: string;\n  constructor(name, url\n  /* hp?: number, imageURL?: string*/\n  ) {\n    this.name = name;\n    this.url = url;\n    /*this.hp = hp ?? 0;\r\n    this.imageURL = imageURL ?? '';*/\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
