@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <mat-card>
     <mat-card-title>Pokémon App</mat-card-title>
 
@@ -6,8 +7,7 @@
         <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
     <button mat-raised-button color="accent" (click)="getPokemonByName()">Search</button>
-    <!--<button mat-raised-button color="primary" (click)="getPokemonList()">Get all</button>-->
-    <mat-grid-list cols="3">
+    <mat-grid-list cols="3" rowHeight="1:1">
       <mat-grid-tile *ngFor="let pokemon of griddedPokemons$ | async">
         <mat-grid-tile-header><h3>{{pokemon.name}}</h3></mat-grid-tile-header>
         <div><h4>{{pokemon.hp}}</h4></div>

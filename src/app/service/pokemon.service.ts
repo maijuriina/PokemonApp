@@ -15,7 +15,7 @@ import { ConditionalExpr, HtmlParser } from '@angular/compiler';
 export class ConfigService {
 
     constructor(private http: HttpClient) {
-
+        // solution pokenode-ts by Gabb-c (github: https://github.com/Gabb-c/pokenode-ts)
         const api = new BerryClient({ cacheOptions: { maxAge: 5000, exclude: { query: false } } }); // Enable cache with 5 seconds including requests with query parameters.
 
         // First call will cache the response
@@ -36,7 +36,7 @@ export class ConfigService {
                 for (var i = 1; i <= amountWanted; i++) {
                     var randomPokemonIndex = Math.floor(Math.random() * amountOfPokemons);
                     if (indexArray.includes(randomPokemonIndex)) { // if index is already in array, it is not added and random is made again
-                        console.log(randomPokemonIndex)
+                        console.log(randomPokemonIndex + " <-- this pokemon was sampled twice, latter was not added to fetched array")
                         i--;
                         continue;
                     } else { // if index is not in array, it is used to push data result to griddedPokemons
@@ -47,16 +47,18 @@ export class ConfigService {
                 }
                 return of(griddedPokemons);
             })
+            // this .then() receives undefined from getHP probably due to order of execution
             .then((result) => {
                 result.forEach(element => {
                     element.forEach(pokemon => {
                         console.log(pokemon.name)
-                        pokemon.hp = this.getHP(pokemon.name as string)
+                        const hp = this.getHP(pokemon.name as string)
+                        pokemon.hp = hp;
                         console.log(pokemon.hp)                       
                     });
-                    //element = this.getHP(element.name as string)
                     //return of(griddedPokemons);                    
                 });
+                return of(griddedPokemons);
             })
             /*.then((data) => {
                 griddedPokemons.forEach(pokemon => {
@@ -70,11 +72,11 @@ export class ConfigService {
             })*/
             .catch((error) => console.error(error));
         })();
-        console.log(griddedPokemons);
+        // these griddedPokemons have an undefined HP
         return of(griddedPokemons);
-
     }
 
+    // returns individual Pokemon by name provided by user in search field
     getPokemonByName(searchTerm: string): any {
         var pokemon: Pokemon = {};
         (async () => {
@@ -85,33 +87,31 @@ export class ConfigService {
                 .then((data) => {
                     const pokemonObject = Object.assign(new Pokemon, data)
                     pokemon = pokemonObject;
-                    //console.log(data) // will output name in searchTerm
+                    console.log(pokemon) // will output name from api
                 }) 
                 .catch((error) => console.error(error));
         })();
-        console.log(pokemon)
+        //console.log(pokemon) // here pokemon returns empty, as it does in getHP
         return of(pokemon);
     }
 
-    /*getMoreData(url: string) {
-        return this.http.get(url)
-    }*/
-
     getHP(name: string): any {
-        var hp;
+        var hp: number = 0;
         (async () => {
             const api = new PokemonClient();
 
             await api
                 .getPokemonByName(name)
                 .then((data) => {
-                    var hp = data.stats[0].base_stat // fetch HP of pokemon
-                    console.log(hp + " <-- hp inside then")
+                    var hpVal = data.stats[0].base_stat // fetch HP of pokemon
+                    hp = hpVal;
+                    console.log(hp + " <-- HP from getHP()") // correct HP is gotten here
                     //return hp;
                 })
                 .catch((error) => console.error(error));
+                //return hp;
         })();
-        console.log(hp);
+        //console.log(hp); // here HP is 0 which was set on line 99, not updating has to do with not waiting
         return hp;
     }
 }
