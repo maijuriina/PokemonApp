@@ -10,7 +10,7 @@
     <mat-grid-list cols="3" rowHeight="1:1">
       <mat-grid-tile *ngFor="let pokemon of griddedPokemons$ | async">
         <mat-grid-tile-header><h3>{{pokemon.name}}</h3></mat-grid-tile-header>
-        <div><h4>{{pokemon.hp}}</h4></div>
+        <div><h4>{{pokemon.hp}} HP</h4></div>
       </mat-grid-tile>
     </mat-grid-list>
 </mat-card>
