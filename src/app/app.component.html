@@ -10,9 +10,9 @@
       <mat-grid-tile *ngFor="let pokemon of griddedPokemons$ | async">
         <mat-expansion-panel hideToggle>
           <mat-expansion-panel-header>
-            <mat-panel-title><h3>{{pokemon.name}}</h3></mat-panel-title>
+            <mat-panel-title><h3>{{pokemon.name}}</h3>
+              <div class="imagebase"><img class="thumbnail" src={{pokemon.imageURL}}></div></mat-panel-title>
           </mat-expansion-panel-header>        
-        <!--<mat-grid-tile-header><h3>{{pokemon.name}}</h3></mat-grid-tile-header>-->
         <h4><span class="material-icons">favorite</span> {{pokemon.hp}} HP</h4>
       </mat-expansion-panel>
       </mat-grid-tile>

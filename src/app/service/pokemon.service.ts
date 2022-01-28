@@ -50,35 +50,20 @@ export class ConfigService {
             .then((result) => {
                 result.forEach(element => {
                     element.forEach(pokemon => {
-                        console.log(pokemon.name)
-                        //this.getPokemonByName(pokemon.name as string)
                         this.getHP(pokemon.name as string).then(data => {
-                            console.log(data + " = DATA")
                             pokemon.hp = data;
                         })
-                        var name = pokemon.name as string;
-                        /*this.getPokemonImage(name).then(data => {
-                            pokemon.imageURL = data;
-                        })*/
-                        console.log(pokemon.hp)                       
-                    });
-                    //return of(griddedPokemons);                    
+                        this.getPokemonImage(pokemon.name as string).then(data => {
+                            pokemon.imageURL = data
+                            console.log(pokemon.imageURL + " <-- imagedata")
+                        })              
+                    });              
                 });
                 return of(griddedPokemons);
             })
-            /*.then((data) => {
-                griddedPokemons.forEach(pokemon => {
-                    var hp = this.getHP(pokemon.name as string)
-                    console.log(hp);
-                    //console.log(this.getHP(pokemon.name as string))
-                    pokemon.hp = this.getHP(pokemon.name as string)
-                    console.log(pokemon.hp)
-                })
-                console.log(griddedPokemons[1].hp + " <- inside getPokemonList")
-            })*/
             .catch((error) => console.error(error));
         })();
-        // these griddedPokemons have an undefined HP
+
         return of(griddedPokemons);
     }
 
@@ -113,7 +98,17 @@ export class ConfigService {
         return hp;
     }
 
-    /*async getPokemonImage(name: string) : Promise<any> {
-        const api
-    }*/
+    async getPokemonImage(name: string) : Promise<any> {
+        const api = new PokemonClient();
+        var image: any;
+        image = await api
+        .getPokemonByName(name)
+        .then((data) => {
+            var spriteUrl = data.sprites.other['official-artwork'].front_default;
+            image = spriteUrl;
+            return image;
+        })
+        .catch((error) => console.error(error));
+        return image;
+    }
 }
