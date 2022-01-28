@@ -13,7 +13,6 @@ import { ConditionalExpr, HtmlParser } from '@angular/compiler';
     providedIn: 'root' // fixes NullInjectorError
   })
 export class ConfigService {
-
     constructor(private http: HttpClient) {
         // solution pokenode-ts by Gabb-c (github: https://github.com/Gabb-c/pokenode-ts)
         const api = new BerryClient({ cacheOptions: { maxAge: 5000, exclude: { query: false } } }); // Enable cache with 5 seconds including requests with query parameters.

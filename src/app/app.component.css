@@ -1,11 +1,19 @@
+mat-expansion-panel {
+    height: auto!important;
+}
+
+mat-expansion-panel-header {
+    height: auto!important; 
+}
+
 .imagebase {
-    height: 100px;
-    width: 100px;
+    height: 80%;
+    align-content: center;
 }
 
 .thumbnail {
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
 }
