@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { SearchresultComponent } from './searchresult/searchresult.component';
 import { RouterModule, Routes } from '@angular/router';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RouterModule, Routes } from '@angular/router';
     MatFormFieldModule,
     FormsModule,
     MatButtonModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([]),
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
