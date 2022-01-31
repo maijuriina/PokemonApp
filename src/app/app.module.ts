@@ -15,11 +15,14 @@ import {MatButtonModule} from '@angular/material/button';
 import { SearchresultComponent } from './searchresult/searchresult.component';
 import { RouterModule, Routes } from '@angular/router';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/homecomponent/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchresultComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatFormFieldModule,
     FormsModule,
     MatButtonModule,
-    RouterModule.forRoot([]),
+    AppRoutingModule,
     MatExpansionModule
   ],
   providers: [],

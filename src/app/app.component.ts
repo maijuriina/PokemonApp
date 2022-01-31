@@ -14,21 +14,10 @@ import { NamedAPIResourceList } from 'pokenode-ts';
 })
 export class AppComponent implements OnInit {
   title = 'PokemonApp';
-  searchTerm: string;
-  griddedPokemons$!: Observable<any>;
+  
+  constructor() {  }
 
-  constructor(private pokemonService: ConfigService, public router: Router) {
-    this.searchTerm = '';
-  }
-
-  ngOnInit() {
-    this.griddedPokemons$ = this.pokemonService.getPokemonList();
-  }
-
-  getPokemonByName() {
-    var LCsearchTerm = this.searchTerm.toLowerCase();
-    this.pokemonService.getPokemonByName(LCsearchTerm);
-  }
+  ngOnInit() {  }
 
 }
 
