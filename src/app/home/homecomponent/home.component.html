@@ -17,7 +17,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
         <h4><span class="material-icons">favorite</span> {{pokemon.hp}} HP</h4>
-        <button mat-raised-button color="accent" (click)="onNavigateClick(['searchresult'])">See more</button>
+        <button mat-raised-button color="accent" (click)="onNavigateClick(['searchresult'], pokemon.name)">See more</button>
       </mat-expansion-panel>
       </mat-grid-tile>
     </mat-grid-list>

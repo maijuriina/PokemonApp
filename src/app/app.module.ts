@@ -17,12 +17,13 @@ import { RouterModule, Routes } from '@angular/router';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/homecomponent/home.component';
+import { ConfigService } from './service/pokemon.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchresultComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

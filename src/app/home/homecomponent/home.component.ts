@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import {Pokemon} from '../../item/pokemon';
 import { NamedAPIResourceList } from 'pokenode-ts';
+import { SearchresultComponent } from 'src/app/searchresult/searchresult.component';
 
 @Component({
   selector: 'app-home',
@@ -29,7 +30,8 @@ export class HomeComponent implements OnInit {
     this.pokemonService.getPokemonByName(LCsearchTerm);
   }
 
-  onNavigateClick(urlToNavigate: any) {
+  onNavigateClick(urlToNavigate: any, name: any) {
+    this.pokemonService.searchTerm = name;
     this.router.navigateByUrl('/' + urlToNavigate);
   }
 }

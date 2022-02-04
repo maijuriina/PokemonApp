@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import { Observable, from } from 'rxjs';
+import { ConfigService } from '../service/pokemon.service';
+import { Pokemon } from '../item/pokemon';
 
 @Component({
   selector: 'app-searchresult',
@@ -7,11 +10,16 @@ import {Router} from '@angular/router';
   styleUrls: ['./searchresult.component.css']
 })
 export class SearchresultComponent implements OnInit {
+  pokemon$!: Observable<Pokemon>;
+  pokeName: any;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private pokemonService: ConfigService) {
    }
 
   ngOnInit(): void {
+    this.pokeName = this.pokemonService.searchTerm;
+    this.pokemon$ = from(this.pokemonService.getPokemonByName(this.pokeName));
+    console.log(this.pokemon$.name + " <-- this.pokemon$ in searchresult ngoninit");
   }
 
   onNavigateClick(urlToNavigate: any) {
