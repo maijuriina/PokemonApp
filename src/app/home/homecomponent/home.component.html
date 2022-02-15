@@ -5,19 +5,21 @@
         <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
     <button mat-raised-button color="accent" (click)="getPokemonByName()">Search</button>
-    <mat-grid-list id="pokeList" cols="3" rowheight="100%">
+    <mat-grid-list id="pokeList" [cols]="breakpoint" rowHeight="3:2" (window:resize)="onResize($event)" guttersize="'10px'">
       <mat-grid-tile *ngFor="let pokemon of griddedPokemons$ | async">
         <mat-expansion-panel hideToggle>
-          <mat-expansion-panel-header collapsedHeight="*" expandedHeight="*">
+          <mat-expansion-panel-header collapsedHeight="auto" expandedHeight="auto">
             <mat-panel-title>
-              <h3>{{pokemon.name}}</h3>
               <div class="imagebase">
                 <img class="thumbnail" src={{pokemon.imageURL}}>
               </div>
+              <h3>{{pokemon.name | titlecase}}</h3>
             </mat-panel-title>
           </mat-expansion-panel-header>
-        <h4><span class="material-icons">favorite</span> {{pokemon.hp}} HP</h4>
-        <button mat-raised-button color="accent" (click)="onNavigateClick(['searchresult'], pokemon.name)">See more</button>
+          <div class="mat-grid-content">
+            <h4><span class="material-icons">favorite</span> {{pokemon.hp}} HP</h4>
+            <button mat-raised-button color="accent" (click)="onNavigateClick(['searchresult'], pokemon.name)">See more</button>
+          </div>
       </mat-expansion-panel>
       </mat-grid-tile>
     </mat-grid-list>

@@ -18,7 +18,7 @@ export class SearchresultComponent implements OnInit {
   ngOnInit(): void {
     this.pokeName = this.pokemonService.searchTerm;
     this.pokemon$ = from(this.pokemonService.getPokemonByName(this.pokeName));
-    console.log(this.pokemon$ + " <-- this.pokemon$ in searchresult ngoninit");
+    //console.log(this.pokemon$ + " <-- this.pokemon$ in searchresult ngoninit");
   }
 
   onNavigateClick(urlToNavigate: any) {

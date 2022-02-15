@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../../service/pokemon.service';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import {Pokemon} from '../../item/pokemon';
@@ -16,13 +17,19 @@ import { SearchresultComponent } from 'src/app/searchresult/searchresult.compone
 export class HomeComponent implements OnInit {
   searchTerm: string;
   griddedPokemons$!: Observable<any>;
+  breakpoint: number = 0;
 
   constructor(private pokemonService: ConfigService, public router: Router) {
     this.searchTerm = '';
    }
 
   ngOnInit(): void {
+    this.breakpoint = (window.innerWidth <= 500) ? 1 : 3;
     this.griddedPokemons$ = this.pokemonService.getPokemonList();
+  }
+
+  onResize(event: any) {
+    this.breakpoint = (event.target.innerWidth <= 500) ? 1 : 3;
   }
 
   getPokemonByName() {

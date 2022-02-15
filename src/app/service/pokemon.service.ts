@@ -1,13 +1,11 @@
 import { APP_ID, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, VirtualTimeScheduler } from 'rxjs';
-import {map} from 'rxjs/operators';
 import { catchError, retry } from 'rxjs/operators';
 import { APIResource, BerryClient, NamedAPIResource } from 'pokenode-ts';
 import { PokemonClient } from 'pokenode-ts';
 import { Pokemon } from '../item/pokemon';
 import {of} from 'rxjs';
-import { url } from 'inspector';
 
 @Injectable({
     providedIn: 'any' // fixes NullInjectorError
@@ -76,7 +74,7 @@ export class ConfigService {
         pokemon.hp = hpResult;
         pokemon.imageURL = urlResult;
         
-        console.log(pokemon);
+        //console.log(pokemon);
         return pokemon;
     }
 
