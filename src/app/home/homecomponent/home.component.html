@@ -4,7 +4,7 @@
         <input type="text" matInput placeholder="Search..." [(ngModel)]= "searchTerm">
         <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
-    <button mat-raised-button color="accent" (click)="getPokemonByName()">Search</button>
+    <button id="searchbutton" mat-raised-button color="accent" (click)="onNavigateClick(['searchresult'], searchTerm)">Search</button>
     <mat-grid-list id="pokeList" [cols]="breakpoint" rowHeight="3:2" (window:resize)="onResize($event)" guttersize="'10px'">
       <mat-grid-tile *ngFor="let pokemon of griddedPokemons$ | async">
         <mat-expansion-panel hideToggle>

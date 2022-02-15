@@ -14,6 +14,10 @@ h3 {
     font-weight: bold;
 }
 
+#searchbutton {
+    margin: 0 0 0 20px;
+}
+
 .imagebase {
     max-width: 80%;
 }

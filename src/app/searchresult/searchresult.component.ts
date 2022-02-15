@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import { Observable, from } from 'rxjs';
 import { ConfigService } from '../service/pokemon.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-searchresult',

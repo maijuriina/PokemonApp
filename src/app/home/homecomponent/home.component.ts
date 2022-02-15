@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   }
 
   onNavigateClick(urlToNavigate: any, name: any) {
-    this.pokemonService.searchTerm = name;
+    this.pokemonService.searchTerm = name.toLowerCase();
     this.router.navigateByUrl('/' + urlToNavigate);
   }
 }

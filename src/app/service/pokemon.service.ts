@@ -6,6 +6,7 @@ import { APIResource, BerryClient, NamedAPIResource } from 'pokenode-ts';
 import { PokemonClient } from 'pokenode-ts';
 import { Pokemon } from '../item/pokemon';
 import {of} from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
     providedIn: 'any' // fixes NullInjectorError
@@ -13,7 +14,7 @@ import {of} from 'rxjs';
 
 export class ConfigService {
     searchTerm: string;
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, public router: Router) {
         // solution pokenode-ts by Gabb-c (github: https://github.com/Gabb-c/pokenode-ts)
         const api = new BerryClient({ cacheOptions: { maxAge: 5000, exclude: { query: false } } }); // Enable cache with 5 seconds including requests with query parameters.
         // First call will cache the response
@@ -90,7 +91,10 @@ export class ConfigService {
             //console.log(hp);
             return hp;
         })
-        .catch((error) => console.error(error));
+        .catch((error) => {
+            console.error(error);
+            this.router.navigateByUrl('/' + 'home');
+        });
         return hp;
     }
 
@@ -104,7 +108,10 @@ export class ConfigService {
             image = spriteUrl;
             return image;
         })
-        .catch((error) => console.error(error));
+        .catch((error) => {
+            console.error(error);
+            this.router.navigateByUrl('/' + 'home');
+        });
         return image;
     }
 }

@@ -2,13 +2,11 @@
     <mat-card-title>Search Result</mat-card-title>
     <button mat-raised-button color="accent" (click)="onNavigateClick(['home'])">Back</button>
     <!--<button mat-raised-button color="primary" (click)="getPokemonList()">Get all</button>-->
-    <mat-grid-list cols="3" rowHeight="5:2">
-      <mat-grid-tile *ngIf="pokemon$ | async as pokemon">
-        <mat-grid-tile-header><h3>{{pokemon.name}}</h3></mat-grid-tile-header>
-        <div><h4>{{pokemon.hp}} HP</h4></div>
-        <div class="imagebase">
-          <img class="thumbnail" src={{pokemon.imageURL}}>
-        </div>
-      </mat-grid-tile>
-    </mat-grid-list>
+    <mat-card id="pokemonCard" *ngIf="pokemon$ | async as pokemon">
+      <h3>{{pokemon.name | titlecase}}</h3>
+      <h4><span class="material-icons">favorite</span> {{pokemon.hp}} HP</h4>
+      <div class="imagebase">
+        <img class="thumbnail" src={{pokemon.imageURL}}>
+      </div>
+    </mat-card>
 </mat-card>
