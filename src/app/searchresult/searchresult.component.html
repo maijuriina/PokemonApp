@@ -3,9 +3,12 @@
     <button mat-raised-button color="accent" (click)="onNavigateClick(['home'])">Back</button>
     <!--<button mat-raised-button color="primary" (click)="getPokemonList()">Get all</button>-->
     <mat-grid-list cols="3" rowHeight="5:2">
-      <mat-grid-tile>
-        <mat-grid-tile-header><h3>{{pokemon$ | async}}</h3></mat-grid-tile-header>
-        <div><h4>{{pokemon$ | async}} HP</h4></div>
+      <mat-grid-tile *ngIf="pokemon$ | async as pokemon">
+        <mat-grid-tile-header><h3>{{pokemon.name}}</h3></mat-grid-tile-header>
+        <div><h4>{{pokemon.hp}} HP</h4></div>
+        <div class="imagebase">
+          <img class="thumbnail" src={{pokemon.imageURL}}>
+        </div>
       </mat-grid-tile>
     </mat-grid-list>
 </mat-card>

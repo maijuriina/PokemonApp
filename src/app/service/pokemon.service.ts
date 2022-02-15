@@ -77,80 +77,8 @@ export class ConfigService {
         pokemon.imageURL = urlResult;
         
         console.log(pokemon);
-        return of(pokemon);
+        return pokemon;
     }
-
-    // LATER VERSION
-
-    /*getPokemonByName(searchTerm: string): any {
-        var pokemon: Pokemon = {};
-        pokemon.name = searchTerm;
-        (async () => {
-            console.log("in async in service")
-            try {
-                const api = new PokemonClient();
-                const result = await api
-                .getPokemonByName(searchTerm)
-                
-                /*.then((data) => {
-                    this.getHP(searchTerm).then(result => {
-                        pokemon.hp = result;
-                        console.log(pokemon.hp + " <-- hp in service byname")
-                    })
-                    this.getPokemonImage(searchTerm).then(result => {
-                        pokemon.imageURL = result
-                        console.log(pokemon.imageURL + " <-- url in service byname");
-                    })
-                    return of(pokemon);
-                })
-                
-
-                await this.getHP(searchTerm).then(data => {
-                    pokemon.hp = data;
-                    console.log(pokemon.hp)
-                })
-                await this.getPokemonImage(searchTerm).then(data => {
-                    pokemon.imageURL = data;
-                    console.log(pokemon.hp)
-                })
-                //pokemon = Object.assign(new Pokemon, result)
-                
-                //pokemon.hp = result.stats[0].base_stat;
-                console.log(pokemon.hp + " <-- getpokemonbyname in service")
-                
-                //pokemon.imageURL = result.sprites.other['official-artwork'].front_default as string;
-                
-                console.log(pokemon.imageURL + " <-- getpokemonbyname in service")
-                //return of(pokemon);
-            }catch(err) {
-                console.log("in error")
-                console.error(err);
-                return err;
-            }
-            
-        });
-        console.log(pokemon.name + " <--- pokemon in service")
-        console.log(pokemon.hp + " <--- pokemon in service")
-        console.log(pokemon.imageURL+ " <--- pokemon in service")
-        return of(pokemon);
-
-            /*.then((data) => {
-                this.getHP(searchTerm).then(result => {
-                    pokemon.hp = result;
-                })
-                this.getPokemonImage(searchTerm).then(result => {
-                    pokemon.imageURL = result
-                })
-                const pokemonObject = Object.assign(new Pokemon, data)
-                pokemon = pokemonObject;
-                console.log(pokemon)
-                return of(pokemon);
-            })
-            .catch((error) => console.log(error));
-        })();
-        return of(pokemon);
-        
-    }*/
 
     // NEW VERSION
     async getHP(name: string) : Promise<any> {
