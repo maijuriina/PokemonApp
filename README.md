@@ -1,12 +1,12 @@
 # PokemonApp
 
-The project can be viewed on: https://pokemon-app-279e1.web.app/home 
+The project can be viewed on: https://pokemon-app-279e1.web.app/home  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
 # Description
 
-The app fetches 20 unique, random Pokemons (name, HP and image) on launch using the PokeApi (https://pokeapi.co/). Pokemons can be searched directly by entering a Pokemon name on the search field.
-The app also uses an accordion element to display more info on a Pokemon when clicked, and hides it when clicked again.
+The app fetches 20 unique, random Pokemons (name, HP and image) on launch using the PokeApi (https://pokeapi.co/). Pokemons can be searched directly by entering a Pokemon name on the search field.  
+The app also uses an accordion element to display more info on a Pokemon when clicked, and hides it when clicked again.  
 Each fetched Pokemon also has a "see more" page, where the Pokemon is displayed individually. Currently there is no "more" information than what is displayed in the preliminary search. When the user returns to the home page, the app fetches 20 new Pokemons from the API.
 
 ## Development server
