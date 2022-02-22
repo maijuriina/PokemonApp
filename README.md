@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Description
 
 The app fetches 20 unique, random Pokemons (name, HP and image) on launch using the PokeApi (https://pokeapi.co/). Pokemons can be searched directly by entering a Pokemon name on the search field.  
-The app also uses an accordion element to display more info on a Pokemon when clicked, and hides it when clicked again.  
+The app uses an accordion element to display more info on a Pokemon when clicked, and hides it when clicked again. The app is responsive to screen size.  
 Each fetched Pokemon also has a "see more" page, where the Pokemon is displayed individually. Currently there is no "more" information than what is displayed in the preliminary search. When the user returns to the home page, the app fetches 20 new Pokemons from the API.
 
 ## Development server
